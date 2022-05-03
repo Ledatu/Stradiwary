@@ -15,6 +15,13 @@ Entity::Entity(int id, olc::vf2d position, olc::vf2d size) {
 	m_size = size;
 }
 
+// reset Entity obj
+void Entity::reset() {
+	m_id = 0;
+	m_position = olc::vf2d(0, 0);
+	m_size = olc::vf2d(0, 0);
+}
+
 // collision checks
 bool Entity::collideEntity(Entity* entity, olc::vf2d offset)
 {
@@ -60,11 +67,4 @@ void Entity::set_position(olc::vf2d position)
 void Entity::set_size(olc::vf2d size)
 {
 	m_size = size;
-}
-
-// reset Entity obj
-void Entity::reset() {
-	m_id = 0;
-	m_position = olc::vf2d(0, 0);
-	m_size = olc::vf2d(0, 0);
 }

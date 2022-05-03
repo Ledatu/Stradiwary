@@ -2,8 +2,8 @@
 #include "olcPixelGameEngine.h"
 
 class Entity {
+protected:
 	int m_id;
-	//int m_count;
 	olc::vf2d m_position;
 	olc::vf2d m_size;
 

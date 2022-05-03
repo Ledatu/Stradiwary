@@ -139,7 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Alive.cpp" />
+    <ClCompile Include="Counter.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Stradiwary.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Alive.h" />
+    <ClInclude Include="Counter.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="olcPixelGameEngine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
