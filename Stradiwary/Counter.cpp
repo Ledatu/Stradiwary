@@ -38,14 +38,17 @@ void Counter::set_max(int max) {
 
 // overloads
 int& Counter::operator ++ () {
-	return ++m_current;
+	set_current(m_current + 1);
+	return m_current;
 }
 int& Counter::operator ++ (int t) {
 	return operator ++ ();
 }
 int& Counter::operator+=(int k) {
-	return m_current += k;
+	set_current(m_current + k);
+	return m_current;
 }
 int& Counter::operator-=(int k) {
-	return m_current -= k;
+	set_current(m_current - k);
+	return m_current;
 }
