@@ -22,6 +22,9 @@ int Counter::current() {
 int Counter::max() {
 	return m_max;
 }
+Timer& Counter::timer() {
+	return m_timer;
+}
 
 // setters
 void Counter::set_current(int current) {
@@ -42,6 +45,13 @@ int& Counter::operator ++ () {
 	return m_current;
 }
 int& Counter::operator ++ (int t) {
+	return operator ++ ();
+}
+int& Counter::operator -- () {
+	set_current(m_current - 1);
+	return m_current;
+}
+int& Counter::operator -- (int t) {
 	return operator ++ ();
 }
 int& Counter::operator+=(int k) {

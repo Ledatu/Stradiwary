@@ -16,6 +16,7 @@ public:
 	// getters
 	int current();
 	int max();
+	Timer& timer();
 
 	// setters
 	void set_current(int current);
@@ -24,6 +25,9 @@ public:
 	// overloads
 	int& operator ++ ();
 	int& operator ++ (int t);
+	int& operator -- ();
+	int& operator -- (int t);
+
 	int& operator += (int k);
 	int& operator -= (int k);
 
