@@ -34,6 +34,7 @@ void Timer::set_interval(float interval) {
 //overloads
 float& Timer::operator += (float time) {
 	m_time += time;
+	return m_time;
 }
 
 // signals
