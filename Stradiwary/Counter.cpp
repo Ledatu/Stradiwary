@@ -30,6 +30,8 @@ Timer& Counter::timer() {
 void Counter::set_current(int current) {
 	if (current > m_max)
 		m_current = m_max;
+	else if (current < 0)
+		m_current = 0;
 	else
 		m_current = current;
 }
