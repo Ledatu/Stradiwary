@@ -33,6 +33,9 @@
     <ClCompile Include="Item.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Backpack.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h">
@@ -51,6 +54,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Backpack.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

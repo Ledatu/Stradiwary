@@ -1,21 +1,18 @@
 #include "Counter.h"
 
-// constructors
 Counter::Counter() {
 	m_current = 0;
 	m_max = 0;
 }
 Counter::Counter(int max, int timerInterval) : m_timer(timerInterval) {
-	m_current = 0;
 	m_max = max;
+	reset();
 }
 
-// reset current
 void Counter::reset() {
 	m_current = 0;
 }
 
-// getters
 int Counter::current() {
 	return m_current;
 }
@@ -26,7 +23,6 @@ Timer& Counter::timer() {
 	return m_timer;
 }
 
-// setters
 void Counter::set_current(int current) {
 	if (current > m_max)
 		m_current = m_max;
@@ -41,31 +37,18 @@ void Counter::set_max(int max) {
 	m_max = max;
 }
 
-// overloads
-int& Counter::operator ++ () {
-	set_current(m_current + 1);
-	return m_current;
-}
-int& Counter::operator ++ (int t) {
-	return operator ++ ();
-}
-int& Counter::operator -- () {
-	set_current(m_current - 1);
-	return m_current;
-}
-int& Counter::operator -- (int t) {
-	return operator ++ ();
-}
-int& Counter::operator += (int k) {
+Counter& Counter::operator += (int k) {
 	set_current(m_current + k);
-	return m_current;
+	return *this;
 }
-int& Counter::operator -= (int k) {
+Counter& Counter::operator -= (int k) {
 	set_current(m_current - k);
-	return m_current;
+	return *this;
 }
-
-// conversion
 Counter::operator int () {
 	return current();
+}
+
+bool Counter::isMax() {
+	return m_current == m_max;
 }
