@@ -54,11 +54,16 @@ int& Counter::operator -- () {
 int& Counter::operator -- (int t) {
 	return operator ++ ();
 }
-int& Counter::operator+=(int k) {
+int& Counter::operator += (int k) {
 	set_current(m_current + k);
 	return m_current;
 }
-int& Counter::operator-=(int k) {
+int& Counter::operator -= (int k) {
 	set_current(m_current - k);
 	return m_current;
+}
+
+// conversion
+Counter::operator int () {
+	return current();
 }

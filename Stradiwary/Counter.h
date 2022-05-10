@@ -31,5 +31,8 @@ public:
 	int& operator += (int k);
 	int& operator -= (int k);
 
+	// conversion
+	operator int ();
+
 };
 
